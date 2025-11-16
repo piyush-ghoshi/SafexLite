@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Emergency Colors -->
+    <color name="emergency_red">#D32F2F</color>
+    <color name="emergency_red_dark">#B71C1C</color>
+    <color name="emergency_red_light">#FFCDD2</color>
+
+    <!-- Status Colors -->
+    <color name="status_active">#F44336</color>
+    <color name="status_in_progress">#FF9800</color>
+    <color name="status_resolved">#4CAF50</color>
+    <color name="status_closed">#9E9E9E</color>
+    <color name="warning">#FFF3CD</color>
+    <color name="warning_text">#856404</color>
+    <color name="success">#4CAF50</color>
+
+    <!-- UI Colors -->
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="accent">#FFC107</color>
+    <color name="background">#FAFAFA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#F44336</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+
+    <!-- Additional UI Colors -->
+    <color name="background_light">#F5F5F5</color>
+    <color name="divider_color">#E0E0E0</color>
+    <color name="list_selector">#E3F2FD</color>
+
+    <!-- Alert Details Colors -->
+    <color name="text_tertiary">#BDBDBD</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="message_background">#F8F9FA</color>
+    <color name="message_border">#E9ECEF</color>
+
+    <!-- Button Colors -->
+    <color name="button_reopen">#2196F3</color>
+    <color name="button_reopen_border">#1976D2</color>
+
+    <!-- Timeline Colors -->
+    <color name="timeline_dot_active">#4CAF50</color>
+    <color name="timeline_dot_inactive">#BDBDBD</color>
+
+    <!-- Night Theme Colors -->
+    <color name="night_background">#121212</color>
+    <color name="night_surface">#1E1E1E</color>
+    <color name="night_text_primary">#FFFFFF</color>
+    <color name="night_text_secondary">#B3B3B3</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_emergency_start">#D32F2F</color>
+    <color name="gradient_emergency_end">#B71C1C</color>
+
+    <!-- Timeline Line Color -->
+    <color name="timeline_line">#E0E0E0</color>
+</resources>

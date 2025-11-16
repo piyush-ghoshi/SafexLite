@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/primary"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Guard Dashboard"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/layoutProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                app:tint="@color/white"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tvGuardName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guard Name"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Logout"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Panic Button Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnPanic"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:text="@string/panic_button"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/panic_button_enhanced"
+            android:elevation="8dp" />
+
+        <TextView
+            android:id="@+id/tvCurrentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Detecting location..."
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+    <!-- Offline Status Banner -->
+    <LinearLayout
+        android:id="@+id/layoutOfflineStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/warning"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvOfflineStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Offline"
+            android:textColor="@color/warning_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSyncStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 pending"
+            android:textColor="@color/warning_text" />
+
+    </LinearLayout>
+
+    <!-- Active Alerts Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/active_alerts"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="12dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAlerts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/tvNoAlerts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No active alerts"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:visibility="gone"
+            android:padding="32dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

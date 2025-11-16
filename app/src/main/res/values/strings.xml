@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SafexLite</string>
+    
+    <!-- Login Screen -->
+    <string name="login_title">SafexLite Login</string>
+    <string name="select_role">Select your role:</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="role_guard">Security Guard</string>
+    <string name="role_admin">Administrator</string>
+    <string name="login_button">Login</string>
+    <string name="signup_button">Create Account</string>
+    <string name="name_hint">Full Name</string>
+    <string name="campus_id_hint">Campus ID</string>
+    
+    <!-- Error Messages -->
+    <string name="error_empty_email">Email is required</string>
+    <string name="error_invalid_email">Please enter a valid email</string>
+    <string name="error_empty_password">Password is required</string>
+    <string name="error_empty_name">Name is required</string>
+    <string name="error_empty_campus_id">Campus ID is required</string>
+    
+    <!-- Guard Dashboard -->
+    <string name="panic_button">EMERGENCY</string>
+    <string name="active_alerts">Active Alerts</string>
+    
+    <!-- Admin Dashboard -->
+    <string name="all_alerts">All Alerts</string>
+    <string name="filter_alerts">Filter Alerts</string>
+    
+    <!-- Alert Details -->
+    <string name="alert_details">Alert Details</string>
+    <string name="accept_alert">Accept</string>
+    <string name="resolve_alert">Resolve</string>
+    <string name="close_alert">Close</string>
+    <string name="reopen_alert">Reopen</string>
+    
+    <!-- Admin Dashboard -->
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="active_alerts_count">Active</string>
+    <string name="in_progress_alerts_count">In Progress</string>
+    <string name="resolved_alerts_count">Resolved</string>
+    <string name="closed_alerts_count">Closed</string>
+    <string name="filter_alerts_label">Filter:</string>
+    <string name="refresh_alerts">Refresh</string>
+    <string name="no_alerts_found">No alerts found</string>
+    <string name="all_alerts_appear_here">All alerts will appear here</string>
+    <string name="close_alert_dialog_title">Close Alert</string>
+    <string name="close_alert_dialog_message">Are you sure you want to close this alert?</string>
+    <string name="alert_closed_successfully">Alert closed successfully</string>
+    <string name="alert_reopened_successfully">Alert reopened successfully</string>
+    <string name="failed_to_close_alert">Failed to close alert</string>
+    <string name="failed_to_reopen_alert">Failed to reopen alert</string>
+    <string name="unknown_location">Unknown</string>
+    <string name="close_alert_dialog_message_with_details">Are you sure you want to close this alert?\n\nAlert from: %1$s\nLocation: %2$s</string>
+    <string name="alert_closed_sync_pending">Alert closed - will sync when online</string>
+    <string name="alert_reopened_sync_pending">Alert reopened - will sync when online</string>
+    <string name="status_online">Online</string>
+    <string name="status_pending">%d pending</string>
+    <string name="status_offline">Offline</string>
+    <string name="logout_title">Logout</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+    <string-array name="admin_dashboard_filter_options">
+        <item>All Alerts</item>
+        <item>Active</item>
+        <item>In Progress</item>
+        <item>Resolved</item>
+        <item>Closed</item>
+    </string-array>
+
+    <!-- Login Errors -->
+    <string name="error_login_failed">Login failed. Please check your credentials.</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_user_not_found">User profile not found. Please contact administrator.</string>
+    <string name="error_role_mismatch">Selected role does not match your account.</string>
+    <string name="error_account_inactive">Your account is inactive. Please contact administrator.</string>
+    
+    <!-- Alert Details -->
+    <string name="alert_details_title">Alert Details</string>
+    <string name="alert_information">Alert Information</string>
+    <string name="alert_timeline">Alert Timeline</string>
+    <string name="reported_by">Reported by:</string>
+    <string name="time_label">Time:</string>
+    <string name="location_label">Location:</string>
+    <string name="message_label">Message:</string>
+    <string name="alert_created">Alert Created</string>
+    <string name="alert_accepted">Alert Accepted</string>
+    <string name="alert_resolved">Alert Resolved</string>
+    <string name="alert_closed">Alert Closed</string>
+    <string name="emergency_alert_raised">Emergency alert raised by %s</string>
+    <string name="alert_accepted_by_guard">Alert accepted by guard</string>
+    <string name="alert_marked_resolved">Alert marked as resolved</string>
+    <string name="alert_closed_by_admin">Alert closed by administrator</string>
+
+    <!-- Common -->
+    <string name="loading">Loading...</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    
+    <!-- Enhanced Error Messages -->
+    <string name="error_network_unavailable">No internet connection available</string>
+    <string name="error_network_timeout">Connection timed out</string>
+    <string name="error_server_unavailable">Server temporarily unavailable</string>
+    <string name="error_too_many_requests">Too many requests. Please wait and try again</string>
+    <string name="error_permission_denied">Permission denied</string>
+    <string name="error_operation_failed">Operation failed</string>
+    <string name="error_invalid_input">Invalid input provided</string>
+    <string name="error_service_unavailable">Service temporarily unavailable</string>
+    
+    <!-- Location Error Messages -->
+    <string name="error_location_permission_required">Location permission is required for emergency alerts</string>
+    <string name="error_location_services_disabled">Location services are disabled</string>
+    <string name="error_location_unavailable">Unable to determine your location</string>
+    <string name="error_location_accuracy_low">Location accuracy is too low</string>
+    <string name="error_campus_blocks_unavailable">Campus location data unavailable</string>
+    <string name="error_location_mapping_failed">Unable to map location to campus area</string>
+    
+    <!-- Firebase Error Messages -->
+    <string name="error_firebase_network">Network error occurred</string>
+    <string name="error_firebase_permission">Access denied. Contact administrator</string>
+    <string name="error_firebase_not_found">Requested data not found</string>
+    <string name="error_firebase_quota_exceeded">Service temporarily overloaded</string>
+    <string name="error_firebase_timeout">Request timed out</string>
+    
+    <!-- Alert Error Messages -->
+    <string name="error_alert_creation_failed">Failed to create emergency alert</string>
+    <string name="error_alert_update_failed">Failed to update alert</string>
+    <string name="error_alert_cooldown">Please wait before creating another alert</string>
+    <string name="error_alert_invalid_.data">Invalid alert data</string>
+    
+    <!-- Authentication Error Messages -->
+    <string name="error_auth_invalid_email">Please enter a valid email address</string>
+    <string name="error_auth_wrong_password">Incorrect password</string>
+    <string name="error_auth_user_not_found">No account found with this email</string>
+    <string name="error_auth_user_disabled">Account has been disabled</string>
+    <string name="error_auth_too_many_attempts">Too many failed attempts</string>
+    <string name="error_auth_network">Authentication network error</string>
+    
+    <!-- Loading Messages -->
+    <string name="loading_authenticating">Authenticating...</string>
+    <string name="loading_creating_alert">Creating emergency alert...</string>
+    <string name="loading_updating_alert">Updating alert...</string>
+    <string name="loading_getting_location">Getting your location...</string>
+    <string name="loading_loading_alerts">Loading alerts...</string>
+    <string name="loading_syncing_data">Syncing data...</string>
+    
+    <!-- Success Messages -->
+    <string name="success_alert_created">Emergency alert created successfully</string>
+    <string name="success_alert_accepted">Alert accepted successfully</string>
+    <string name="success_alert_resolved">Alert resolved successfully</string>
+    <string name="success_alert_closed">Alert closed successfully</string>
+    <string name="success_login">Login successful</string>
+    <string name="success_data_synced">Data synchronized successfully</string>
+    
+    <!-- Action Messages -->
+    <string name="action_enable_location">Enable Location</string>
+    <string name="action_grant_permission">Grant Permission</string>
+    <string name="action_open_settings">Open Settings</string>
+    <string name="action_contact_admin">Contact Administrator</string>
+    <string name="action_try_again">Try Again</string>
+    <string name="action_continue_offline">Continue Offline</string>
+    <string name="action_manual_selection">Select Manually</string>
+    
+    <!-- Logout -->
+    <string name="logout_button">Logout</string>
+    
+    <!-- Permission Messages -->
+    <string name="permission_location_title">Location Permission Required</string>
+    <string name="permission_location_message">This app needs location access to automatically detect your location during emergencies and help responders find you quickly.</string>
+    <string name="permission_location_rationale">Location permission is essential for emergency response. Your location is only used during emergencies and is not stored or shared.</string>
+    <string name="permission_location_denied_title">Location Permission Denied</string>
+    <string name="permission_location_denied_message">Location permission has been denied. To use emergency features, please enable location permission in app settings.</string>
+    
+    <!-- Offline Messages -->
+    <string name="offline_mode_active">Offline mode active</string>
+    <string name="offline_data_will_sync">Data will sync when connection is restored</string>
+    <string name="offline_limited_functionality">Limited functionality available offline</string>
+    <string name="offline_pending_operations">%d operations pending sync</string>
+    
+    <!-- Retry Messages -->
+    <string name="retry_in_seconds">Retrying in %d seconds...</string>
+    <string name="retry_attempt" formatted="false">Attempt %d of %d</string>
+    <string name="retry_failed_all_attempts">All retry attempts failed</string>
+</resources>

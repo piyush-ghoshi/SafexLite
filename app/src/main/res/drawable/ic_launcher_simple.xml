@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="@color/emergency_red"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"/>
+    
+    <!-- Emergency icon -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M24,8C26.2,8 28,9.8 28,12C28,13.48 27.2,14.78 26,15.46V17C32.72,17.5 38,22.9 38,29V34L42,38V40H6V38L10,34V29C10,22.9 15.28,17.5 22,17V15.46C20.8,14.78 20,13.48 20,12C20,9.8 21.8,8 24,8ZM24,42C26.2,42 28,40.2 28,38H20C20,40.2 21.8,42 24,42Z"/>
+</vector>

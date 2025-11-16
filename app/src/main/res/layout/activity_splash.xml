@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter" />
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="SafexLite"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.05" />
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Your Safety, Our Priority"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:alpha="0.7"
+            android:fontFamily="sans-serif-light" />
+
+    </LinearLayout>
+
+    <!-- Loading indicator -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:indeterminateTint="?attr/colorPrimary" />
+
+</RelativeLayout>

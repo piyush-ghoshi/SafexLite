@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:paddingHorizontal">@dimen/button_padding_horizontal</item>
+    </style>
+</resources>

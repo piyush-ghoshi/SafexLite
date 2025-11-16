@@ -1,0 +1,117 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null && request.auth.uid != null;
+    }
+    
+    // Helper function to get user role (with existence check)
+    function getUserRole() {
+      return exists(/databases/$(database)/documents/users/$(request.auth.uid)) ?
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role : null;
+    }
+    
+    // Helper function to check if user is admin
+    function isAdmin() {
+      return isAuthenticated() && getUserRole() == 'ADMIN';
+    }
+    
+    // Helper function to check if user is guard or admin
+    function isGuardOrAdmin() {
+      return isAuthenticated() && getUserRole() in ['GUARD', 'ADMIN'];
+    }
+    
+    // Helper function to validate alert data
+    function isValidAlert(alertData) {
+      return alertData.keys().hasAll(['guardId', 'guardName', 'timestamp', 'status']) &&
+             alertData.guardId is string && alertData.guardId.size() > 0 &&
+             alertData.guardName is string && alertData.guardName.size() > 0 &&
+             alertData.status in ['ACTIVE', 'IN_PROGRESS', 'RESOLVED', 'CLOSED'] &&
+             (alertData.message == null || (alertData.message is string && alertData.message.size() <= 500));
+    }
+    
+    // Helper function to validate status transitions
+    function isValidStatusTransition(currentStatus, newStatus) {
+      return (currentStatus == 'ACTIVE' && newStatus in ['IN_PROGRESS', 'CLOSED']) ||
+             (currentStatus == 'IN_PROGRESS' && newStatus in ['RESOLVED', 'CLOSED']) ||
+             (currentStatus == 'RESOLVED' && newStatus == 'CLOSED');
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      // Users can read their own data
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      
+      // Admins can read all user data
+      allow read: if isAdmin();
+      
+      // Allow initial profile creation (signup)
+      allow create: if isAuthenticated() && request.auth.uid == userId &&
+        request.resource.data.keys().hasAll(['email', 'name', 'role']) &&
+        request.resource.data.email is string && request.resource.data.email.matches('.*@.*\\..*') &&
+        request.resource.data.name is string && request.resource.data.name.size() > 0 &&
+        request.resource.data.role in ['GUARD', 'ADMIN'];
+      
+      // Allow users to update their own profile
+      allow update: if isAuthenticated() && request.auth.uid == userId &&
+        request.resource.data.keys().hasAll(['email', 'name', 'role']) &&
+        request.resource.data.email is string &&
+        request.resource.data.name is string && request.resource.data.name.size() > 0 &&
+        request.resource.data.role in ['GUARD', 'ADMIN'];
+      
+      // Only allow users to delete their own profile
+      allow delete: if isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Alerts collection
+    match /alerts/{alertId} {
+      // All authenticated users can read alerts
+      allow read: if isAuthenticated();
+      
+      // All authenticated users can create alerts
+      allow create: if isAuthenticated() &&
+        request.resource.data.guardId == request.auth.uid;
+      
+      // All authenticated users can update alerts
+      allow update: if isAuthenticated();
+      
+      // Only admins can delete alerts
+      allow delete: if isAdmin();
+    }
+    
+    // Campus blocks collection
+    match /campus_blocks/{blockId} {
+      // All authenticated users can read campus blocks
+      allow read: if isAuthenticated();
+      
+      // Only admins can modify campus blocks
+      allow write: if isAdmin() &&
+        resource.data.keys().hasAll(['name', 'coordinates', 'radius']) &&
+        resource.data.name is string && resource.data.name.size() > 0 &&
+        resource.data.coordinates is latlng &&
+        resource.data.radius is number && resource.data.radius > 0;
+    }
+    
+    // Archived alerts - admin only
+    match /archived_alerts/{alertId} {
+      allow read, write: if isAdmin();
+    }
+    
+    // System logs - admin only
+    match /system_logs/{logId} {
+      allow read, write: if isAdmin();
+    }
+    
+    // Security events - admin only  
+    match /security_events/{eventId} {
+      allow read, write: if isAdmin();
+    }
+    
+    // Deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

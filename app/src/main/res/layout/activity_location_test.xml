@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_light">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location Services Test"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ready to test location services"
+        android:textSize="16sp"
+        android:textColor="@color/text_secondary"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Test Button -->
+
+    <!-- Loading indicator -->
+    <Button
+        android:id="@+id/locationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_primary"
+        android:padding="16dp"
+        android:text="Test Location Detection"
+        android:textColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:visibility="gone" />
+
+    <!-- Result Text -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+        android:textColor="@color/text_primary"
+        android:background="@color/surface"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Instructions -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instructions:\n1. Tap the button to test location detection\n2. Grant location permissions if prompted\n3. If GPS is unavailable or inaccurate, manual selection will be launched\n4. Select a campus block from the list if needed"
+        android:textSize="12sp"
+        android:textColor="@color/text_hint"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

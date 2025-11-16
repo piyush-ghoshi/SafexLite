@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Shadow -->
+            <item android:top="4dp" android:left="4dp" android:right="4dp" android:bottom="4dp">
+                <shape android:shape="oval">
+                    <solid android:color="#40000000" />
+                </shape>
+            </item>
+            <!-- Main button -->
+            <item android:bottom="4dp" android:right="4dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/emergency_red_dark" />
+                    <stroke android:width="6dp" android:color="@color/white" />
+                </shape>
+            </item>
+            <!-- Inner glow -->
+            <item android:bottom="10dp" android:right="10dp" android:top="6dp" android:left="6dp">
+                <shape android:shape="oval">
+                    <stroke android:width="2dp" android:color="@color/emergency_red_light" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <!-- Shadow -->
+            <item android:top="6dp" android:left="6dp" android:right="6dp" android:bottom="6dp">
+                <shape android:shape="oval">
+                    <solid android:color="#30000000" />
+                </shape>
+            </item>
+            <!-- Main button -->
+            <item android:bottom="6dp" android:right="6dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/emergency_red" />
+                    <stroke android:width="6dp" android:color="@color/white" />
+                </shape>
+            </item>
+            <!-- Inner glow -->
+            <item android:bottom="12dp" android:right="12dp" android:top="6dp" android:left="6dp">
+                <shape android:shape="oval">
+                    <stroke android:width="2dp" android:color="@color/emergency_red_light" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

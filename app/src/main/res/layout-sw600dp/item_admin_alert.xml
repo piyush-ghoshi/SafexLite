@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Card.Alert"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <!-- Left side - Alert icon and status indicator -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="20dp">
+
+            <ImageView
+                android:id="@+id/ivAlertIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_alert_active"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                style="@style/StatusBadge.Active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACTIVE" />
+
+        </LinearLayout>
+
+        <!-- Main content area -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Header with guard name and timestamp -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvGuardName"
+                    style="@style/TextAppearance.Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Guard Name"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvTimestamp"
+                    style="@style/TextAppearance.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:34 PM"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/tvLocation"
+                style="@style/TextAppearance.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="16sp"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Message (optional) -->
+            <TextView
+                android:id="@+id/tvMessage"
+                style="@style/TextAppearance.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Emergency message"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/message_background"
+                android:padding="12dp"
+                android:visibility="gone" />
+
+            <!-- Admin-specific information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvAcceptedBy"
+                    style="@style/TextAppearance.Caption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Accepted by: Guard Name"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvResponseTime"
+                    style="@style/TextAppearance.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Response: 5m"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- Resolution Time -->
+            <TextView
+                android:id="@+id/tvResolutionTime"
+                style="@style/TextAppearance.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resolution time: 15m"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Right side - Admin action buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="20dp">
+
+            <Button
+                android:id="@+id/btnClose"
+                style="@style/Button.Close"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:text="Close"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnReopen"
+                style="@style/Button.Reopen"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:text="Reopen"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

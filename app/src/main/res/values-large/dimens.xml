@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Large screen dimensions -->
+    
+    <!-- Margins and Padding -->
+    <dimen name="margin_small">12dp</dimen>
+    <dimen name="margin_medium">20dp</dimen>
+    <dimen name="margin_large">28dp</dimen>
+    <dimen name="margin_xlarge">36dp</dimen>
+    
+    <dimen name="padding_small">12dp</dimen>
+    <dimen name="padding_medium">20dp</dimen>
+    <dimen name="padding_large">28dp</dimen>
+    <dimen name="padding_xlarge">36dp</dimen>
+    
+    <!-- Card dimensions -->
+    <dimen name="card_margin">12dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_elevation">6dp</dimen>
+    
+    <!-- Button dimensions -->
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="button_height_small">40dp</dimen>
+    <dimen name="button_corner_radius">10dp</dimen>
+    <dimen name="button_corner_radius_small">20dp</dimen>
+    <dimen name="button_padding_horizontal">28dp</dimen>
+    <dimen name="button_padding_horizontal_small">20dp</dimen>
+    
+    <!-- Emergency button dimensions -->
+    <dimen name="emergency_button_size">240dp</dimen>
+    <dimen name="emergency_button_corner_radius">16dp</dimen>
+    <dimen name="emergency_button_elevation">10dp</dimen>
+    
+    <!-- Text sizes -->
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+    <dimen name="text_size_title">22sp</dimen>
+    <dimen name="text_size_emergency">28sp</dimen>
+    
+    <!-- Icon sizes -->
+    <dimen name="icon_size_small">20dp</dimen>
+    <dimen name="icon_size_medium">28dp</dimen>
+    <dimen name="icon_size_large">36dp</dimen>
+    <dimen name="icon_size_xlarge">52dp</dimen>
+    
+</resources>

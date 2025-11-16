@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night mode color overrides -->
+    
+    <!-- Background Colors -->
+    <color name="background">@color/night_background</color>
+    <color name="surface">@color/night_surface</color>
+    <color name="background_light">#2C2C2C</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">@color/night_text_primary</color>
+    <color name="text_secondary">@color/night_text_secondary</color>
+    <color name="text_hint">#666666</color>
+    
+    <!-- UI Colors -->
+    <color name="divider_color">#333333</color>
+    <color name="list_selector">#1E3A8A</color>
+    <color name="message_background">#2C2C2C</color>
+    <color name="message_border">#444444</color>
+    
+    <!-- Emergency colors remain the same for visibility -->
+    <!-- Status colors remain the same for consistency -->
+    
+</resources>

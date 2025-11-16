@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252032406125",
+    "project_id": "safexlite",
+    "storage_bucket": "safexlite.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252032406125:android:d4197ce99fdc0f35bc2564",
+        "android_client_info": {
+          "package_name": "com.campus.panicbutton"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBERA1zFsE-u5r1CLwpgby3c8G7F6LCNe8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

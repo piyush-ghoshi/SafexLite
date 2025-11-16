@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tablet dimensions (600dp+ width) -->
+    
+    <!-- Margins and Padding -->
+    <dimen name="margin_small">16dp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_xlarge">48dp</dimen>
+    
+    <dimen name="padding_small">16dp</dimen>
+    <dimen name="padding_medium">24dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="padding_xlarge">48dp</dimen>
+    
+    <!-- Card dimensions -->
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="card_padding">24dp</dimen>
+    <dimen name="card_corner_radius">20dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    
+    <!-- Button dimensions -->
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="button_height_small">48dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="button_corner_radius_small">24dp</dimen>
+    <dimen name="button_padding_horizontal">32dp</dimen>
+    <dimen name="button_padding_horizontal_small">24dp</dimen>
+    
+    <!-- Emergency button dimensions -->
+    <dimen name="emergency_button_size">280dp</dimen>
+    <dimen name="emergency_button_corner_radius">20dp</dimen>
+    <dimen name="emergency_button_elevation">12dp</dimen>
+    
+    <!-- Text sizes -->
+    <dimen name="text_size_small">16sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_xlarge">22sp</dimen>
+    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_emergency">32sp</dimen>
+    
+    <!-- Icon sizes -->
+    <dimen name="icon_size_small">24dp</dimen>
+    <dimen name="icon_size_medium">32dp</dimen>
+    <dimen name="icon_size_large">40dp</dimen>
+    <dimen name="icon_size_xlarge">56dp</dimen>
+    
+    <!-- Status badge dimensions -->
+    <dimen name="status_badge_padding_horizontal">12dp</dimen>
+    <dimen name="status_badge_padding_vertical">6dp</dimen>
+    <dimen name="status_badge_corner_radius">16dp</dimen>
+    <dimen name="status_badge_min_width">64dp</dimen>
+    
+</resources>

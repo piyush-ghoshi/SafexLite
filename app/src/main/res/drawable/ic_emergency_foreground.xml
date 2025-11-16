@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Emergency shield icon -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M54,20L54,20C60,20 65,25 65,31L65,77C65,83 60,88 54,88L54,88C48,88 43,83 43,77L43,31C43,25 48,20 54,20Z"/>
+    
+    <!-- Exclamation mark -->
+    <path
+        android:fillColor="@color/emergency_red"
+        android:pathData="M54,30L54,60M54,70L54,75"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"/>
+    
+    <!-- Emergency cross -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M50,45L58,45M54,41L54,49"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"/>
+</vector>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <!-- Profile Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:tint="@color/primary"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+    </LinearLayout>
+
+    <!-- User Information -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <!-- Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user@example.com"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Role -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Role"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvUserRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guard"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary" />
+
+    </LinearLayout>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/btnLogoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/error"
+        style="@style/Widget.MaterialComponents.Button" />
+
+</LinearLayout>

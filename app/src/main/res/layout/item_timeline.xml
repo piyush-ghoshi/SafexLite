@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Timeline Indicator -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/timelineIndicator"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/timeline_dot_active" />
+
+        <View
+            android:id="@+id/timelineLine"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:background="@color/timeline_line"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- Timeline Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTimelineTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alert Created"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTimelineDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Emergency alert raised by John Doe"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvTimelineTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Dec 15, 2024 2:30 PM"
+            android:textColor="@color/text_tertiary"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

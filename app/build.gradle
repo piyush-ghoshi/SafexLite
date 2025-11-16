@@ -1,0 +1,106 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'com.google.devtools.ksp' version '1.9.10-1.0.13'
+}
+
+android {
+    namespace 'com.campus.panicbutton'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.campus.panicbutton"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+    
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+        animationsDisabled = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-process:2.7.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    
+    // Firebase BOM
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-functions'
+    
+    // Location Services
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    
+    // Room for offline support
+    implementation 'androidx.room:room-runtime:2.6.1'
+    implementation 'androidx.room:room-ktx:2.6.1'
+    ksp 'androidx.room:room-compiler:2.6.1'
+    
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:5.8.0'
+    testImplementation 'org.mockito:mockito-inline:5.2.0'
+    testImplementation 'org.mockito.kotlin:mockito-kotlin:5.2.1'
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3'
+    testImplementation 'com.google.truth:truth:1.1.4'
+    testImplementation 'androidx.room:room-testing:2.6.1'
+    testImplementation 'org.robolectric:robolectric:4.11.1'
+    
+    // Firebase Testing
+    testImplementation 'com.google.firebase:firebase-firestore:24.10.0'
+    
+    // Android Testing
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.5.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.5.1'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    androidTestImplementation 'org.mockito:mockito-android:5.8.0'
+    androidTestImplementation 'androidx.room:room-testing:2.6.1'
+    androidTestImplementation 'com.google.truth:truth:1.1.4'
+    
+    // UI Testing
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-idling-resource:3.5.1'
+}

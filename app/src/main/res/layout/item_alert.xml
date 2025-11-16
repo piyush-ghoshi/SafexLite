@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Card.Alert"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header with guard name and timestamp -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvGuardName"
+                style="@style/TextAppearance.Subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Guard Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTimestamp"
+                style="@style/TextAppearance.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:34 PM"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Location and Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvLocation"
+                style="@style/TextAppearance.Body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Location"
+                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                style="@style/StatusBadge.Active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACTIVE" />
+
+        </LinearLayout>
+
+        <!-- Message (optional) -->
+        <TextView
+            android:id="@+id/tvMessage"
+            style="@style/TextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Emergency message"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/message_background"
+            android:padding="8dp"
+            android:visibility="gone" />
+
+        <!-- Accepted by information -->
+        <TextView
+            android:id="@+id/tvAcceptedBy"
+            style="@style/TextAppearance.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accepted by: Guard Name"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btnAccept"
+                style="@style/Button.Accept"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/accept_alert"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnResolve"
+                style="@style/Button.Resolve"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/resolve_alert"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text Styles -->
+    <style name="TextAppearance.Title" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Subtitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextAppearance.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.Emergency" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/emergency_red</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <!-- Use left/right padding for API < 26 -->
+        <item name="android:paddingLeft">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/button_padding_horizontal</item>
+    </style>
+
+    <style name="Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+    </style>
+
+    <style name="Button.Emergency" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/emergency_red</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Button.Accept" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/status_resolved</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button.Resolve" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button.Close" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/error</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button.Reopen" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/button_reopen</item>
+        <item name="android:textColor">@color/button_reopen</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="CardViewStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">12dp</item>
+    </style>
+
+    <style name="Card.Alert" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardElevation">2dp</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardBackgroundColor">@color/surface</item>
+    </style>
+
+    <!-- Input Field Style -->
+    <style name="InputField" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+    </style>
+
+    <!-- Status Badge Styles -->
+    <style name="StatusBadge">
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="StatusBadge.Active">
+        <item name="android:background">@color/status_active</item>
+    </style>
+
+</resources>
