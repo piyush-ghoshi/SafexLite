@@ -35,45 +35,7 @@ SafexLite is a professional emergency alert system designed for campus security.
 - **Notifications:** Firebase Cloud Messaging
 - **UI:** Material Design 3
 
-## 🚀 Getting Started
 
-### Prerequisites
-
-- Android Studio Arctic Fox or later
-- Android SDK 24 or higher (Android 7.0+)
-- Firebase account
-- JDK 8 or higher
-
-### Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/SafexLite.git
-cd SafexLite
-```
-
-2. **Firebase Setup**
-   - Create a Firebase project at https://console.firebase.google.com/
-   - Add an Android app with package name: `com.campus.panicbutton`
-   - Download `google-services.json`
-   - Place it in `app/` directory
-   - Enable these services:
-     - Authentication (Email/Password)
-     - Firestore Database
-     - Cloud Messaging (optional, for push notifications)
-
-3. **Add Custom Notification Sound (Optional)**
-   - Place your `emergency_alert.mp3` file in `app/src/main/res/raw/`
-   - Or use the default notification sound
-
-4. **Build and Run**
-```bash
-./gradlew assembleDebug
-```
-
-The APK will be generated at: `app/build/outputs/apk/debug/app-debug.apk`
-
-## 🔐 User Roles
 
 ### Guard
 - Create emergency alerts with location
